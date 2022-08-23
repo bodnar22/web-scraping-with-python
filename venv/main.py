@@ -36,6 +36,7 @@ for item in all_task_of_subjects:
         item_text = item.text
         # видаляємо \n у строках
         item_text = " ".join(item_text.split())
+        # видаляємо символи лишніх тегів
         rep_result = re.sub("0% | 0%|\(..\)|\(...\)|\(.\)", '', item_text)
         # rep = ("  ")
         # for item in rep_result:
