@@ -1,4 +1,6 @@
 # coding=utf8
+import json
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -8,14 +10,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import requests
 import csv
+import os
 
-def get_data(url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
-    }
+# def get_data(url):
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+}
 
-    url = " https://www.partycity.com/"
-    r = requests.get(url=url, headers=headers)
+url = " https://www.partycity.com/"
+r = requests.get(url=url, headers=headers)
     # with open("index.html", "w", encoding="utf-8") as file:
     #     file.write(r.text)
 
@@ -63,7 +66,29 @@ with open("index_selenium.html", encoding="utf-8") as file:
 soup = BeautifulSoup(src, "lxml")
 
 cath_list = soup.find_all("div", class_="pc-type pc-type--title-3 pc-navigation__column__header")[:-1]
-for item in cath_list:
-    name_of_dir = item.find("a", tabindex="-1").text.strip()
+cath_page_links_list = []
+all_cath_dict = {}
+for cath in cath_list:
+    name_of_dir = cath.find("a", tabindex="-1").text.strip()
+    link = cath.find("a", tabindex="-1").get('href')
+    cath_page_links_list.append(link)
+    all_cath_dict[name_of_dir] = link
+    # print(link)
+# with open("all_cath_dict.json", "w", encoding="utf-8") as file:
+#     json.dump(all_cath_dict, file, indent=4, ensure_ascii=False)
+    if not os.path.exists(f"{name_of_dir}"):
+        os.mkdir(f"{name_of_dir}")
+
+
+    responce_of_cathegorie = requests.get(link, headers=headers)
+    cathegorie = responce_of_cathegorie.text
+    soup_cath = BeautifulSoup(cathegorie, "lxml")
+    subcath_list = soup.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__link")
+    for item in subcath_list:
+        name_of_subcath = item.find("a", class_="pc-navigation__menu__link")
+        if not os.path.exists(f"name_of_dir/{name_of_subcath}"):
+            os.mkdir(f"name_of_dir/{name_of_subcath}")
+
+
 
 
