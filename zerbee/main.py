@@ -1,6 +1,7 @@
 # coding=utf8
 import json
 
+from lxml.doctestcompare import strip
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -13,6 +14,8 @@ import csv
 import os
 
 # def get_data(url):
+from first_projects.main import letter
+
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 }
@@ -76,18 +79,25 @@ for cath in cath_list:
     # print(link)
 # with open("all_cath_dict.json", "w", encoding="utf-8") as file:
 #     json.dump(all_cath_dict, file, indent=4, ensure_ascii=False)
-    if not os.path.exists(f"{name_of_dir}"):
-        os.mkdir(f"{name_of_dir}")
+#     if not os.path.exists(f"{name_of_dir}"):
+#         os.mkdir(f"{name_of_dir}")
 
 
     responce_of_cathegorie = requests.get(link, headers=headers)
     cathegorie = responce_of_cathegorie.text
     soup_cath = BeautifulSoup(cathegorie, "lxml")
-    subcath_list = soup.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__link")
-    for item in subcath_list:
-        name_of_subcath = item.find("a", class_="pc-navigation__menu__link")
-        if not os.path.exists(f"name_of_dir/{name_of_subcath}"):
-            os.mkdir(f"name_of_dir/{name_of_subcath}")
+    cath_page_links_list = []
+    subcath_list = soup.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__item")
+    for subcath in subcath_list:
+        fullname = subcath.find("a", class_="pc-navigation__menu__link").get_text().__str__()
+        unn_name = subcath.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__link")
+        name_of_subdir = fullname.replace('unn_name', ' ').__str__().replace('', '')
+        print(str(f"INFO: Обработано {subcath} страниц из {subcath_list}"))
+    print(name_of_subdir)
+    # for item in subcath_list:
+    #     name_of_subcath = item.find("a", class_="pc-navigation__menu__link").text.strip()
+    #     if not os.path.exists(f"{name_of_subcath}"):
+    #         os.mkdir(f"{name_of_subcath}")
 
 
 
