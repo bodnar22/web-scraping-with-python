@@ -71,31 +71,47 @@ soup = BeautifulSoup(src, "lxml")
 cath_list = soup.find_all("div", class_="pc-type pc-type--title-3 pc-navigation__column__header")[:-1]
 cath_page_links_list = []
 all_cath_dict = {}
-for cath in cath_list:
+for cath in cath_list: #Збір посилань на сторінки категорій
     name_of_dir = cath.find("a", tabindex="-1").text.strip()
     link = cath.find("a", tabindex="-1").get('href')
-    cath_page_links_list.append(link)
+    cath_page_links_list.append(link) #список посилань на сторінки категорій
     all_cath_dict[name_of_dir] = link
     # print(link)
 # with open("all_cath_dict.json", "w", encoding="utf-8") as file:
 #     json.dump(all_cath_dict, file, indent=4, ensure_ascii=False)
 #     if not os.path.exists(f"{name_of_dir}"):
 #         os.mkdir(f"{name_of_dir}")
+    for item in cath_page_links_list: # пробіжка по сторінках з категоріями
+        responce_of_single_cath = requests.get(item, headers=headers)
+        cathegorie = responce_of_single_cath.text
+        soup_cath = BeautifulSoup(cathegorie, "lxml")
+
+        subcath_names = soup_cath.find("div", class_="pc-related-links__items")
+        subcath_links_tags = soup.find_all("a", class_="pc-button pc-button--solid-black  ") #посилання на розділи категорій
+        for link in subcath_links_tags:
+            part_of_cath = link.get_text()
+            link_of_part = link.get("href")
+
+        # print(link_of_part)
 
 
-    responce_of_cathegorie = requests.get(link, headers=headers)
-    cathegorie = responce_of_cathegorie.text
-    soup_cath = BeautifulSoup(cathegorie, "lxml")
-    cath_page_links_list = []
-    subcath_list = soup.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__item")
-    for subcath in subcath_list:
-        fullname = subcath.find("a", class_="pc-navigation__menu__link").get_text().__str__()
-        unn_name = subcath.find("ul", class_="pc-navigation__menu pc-navigation__menu--secondary").find_all("li", class_="pc-navigation__menu__link")
-        name_of_subdir = fullname.replace('unn_name', ' ').__str__().replace('', '')
-        print(str(f"INFO: Обработано {subcath} страниц из {subcath_list}"))
-    print(name_of_subdir)
+    # cath_page_links_list = []
+    # subcath_list = soup.find("div", class_="pc-navigation__menu pc-navigation__menu--secondary").get_text() # теги субкатегорій
+    # for subcath in subcath_list:
+    #     subcath_link = subcath.find_all("a", class_="pc-navigation__menu__link").get("href")
+    #     cath_page_links_list.append(subcath_link)
+    # print(cath_page_links_list)
     # for item in subcath_list:
-    #     name_of_subcath = item.find("a", class_="pc-navigation__menu__link").text.strip()
+    #     full_subcath = item.text.strip() # субкатегорія з підпунктами
+    #     cath_page_links_list.append(full_subcath)
+    #     # for fold in full_subcath:
+    #     #     name_of_subdir = fold
+    # print(cath_page_links_list)
+
+        # cath_page_links_list.append(name_of_subcath)
+
+        # subcath_dir = name_of_subcath
+    # print(name_of_subcath)
     #     if not os.path.exists(f"{name_of_subcath}"):
     #         os.mkdir(f"{name_of_subcath}")
 
