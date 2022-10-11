@@ -76,22 +76,41 @@ for cath in cath_list: #Збір посилань на сторінки кате
     link = cath.find("a", tabindex="-1").get('href')
     cath_page_links_list.append(link) #список посилань на сторінки категорій
     all_cath_dict[name_of_dir] = link
-    # print(link)
+    cpllist = cath_page_links_list[-1].split("/n") #без повторень ссилок, построчний перебор
+    # print(cpllist)
 # with open("all_cath_dict.json", "w", encoding="utf-8") as file:
 #     json.dump(all_cath_dict, file, indent=4, ensure_ascii=False)
 #     if not os.path.exists(f"{name_of_dir}"):
 #         os.mkdir(f"{name_of_dir}")
-    for item in cath_page_links_list: # пробіжка по сторінках з категоріями
+    for item in cpllist: # пробіжка по сторінках з категоріями
         responce_of_single_cath = requests.get(item, headers=headers)
         cathegorie = responce_of_single_cath.text
         soup_cath = BeautifulSoup(cathegorie, "lxml")
 
-        subcath_names = soup_cath.find("div", class_="pc-related-links__items")
-        subcath_links_tags = soup.find_all("a", class_="pc-button pc-button--solid-black  ") #посилання на розділи категорій
-        for link in subcath_links_tags:
-            part_of_cath = link.get_text()
-            link_of_part = link.get("href")
 
+#
+#         subcath_names = soup_cath.find("div", class_="pc-related-links__items")
+#         subcath_links_tags = soup.find_all("a", class_="pc-button pc-button--solid-black  ") #посилання на розділи категорій
+#         print(subcath_links_tags)
+        # for link in subcath_links_tags:
+        #     part_of_cath = link.get_text()
+        #     link_of_part = link.get("href")
+        #     print(part_of_cath)
+
+            # responce_of_part = requests.get(link_of_part, headers=headers)
+            # part = responce_of_part.text
+            # soup_part = BeautifulSoup(part, "lxml")
+            #
+            # all_cards = soup_part.find("div", class_="pc-type pc-type--title-7 pc-search-sort__total").split(" ")[:1]
+            # print(cards_count)
+
+
+
+
+
+
+
+            # for i in range()
         # print(link_of_part)
 
 
