@@ -12,9 +12,12 @@ from selenium.webdriver.support import expected_conditions as EC
 import requests
 import csv
 import os
-
+import re
 # def get_data(url):
 from first_projects.main import letter
+from requests_html import HTMLSession
+from urllib.parse import quote
+# ^ for problem solve with Percent encoding
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
@@ -39,13 +42,13 @@ def get_data_with_selenium(url):
     options.add_argument("safebrowsing-disable-extension-blacklist")
     driver = webdriver.Chrome(options=options, executable_path=r'C:\\Users\\Admin\\Desctop\\project_1\\chromedriver\\chromedriver.exe')
 
-#     try:
-#         driver = webdriver.Chrome(
-#             executable_path="C:\\Users\\Admin\\Desctop\\project_1\\chromedriver\\chromedriver.exe",
-#             options=options
-#         )
-#         driver.get(url=url)
-#         time.sleep(10)
+    # try:
+    #     driver = webdriver.Chrome(
+    #         executable_path="C:\\Users\\Admin\\Desctop\\project_1\\chromedriver\\chromedriver.exe",
+    #         options=options
+    #     )
+    #     driver.get(url=url)
+    #     time.sleep(10)
 #
 #         with open("index_selenium.html", "w", encoding="utf-8") as file:
 #             file.write(driver.page_source)
@@ -59,7 +62,7 @@ def get_data_with_selenium(url):
 #
 # def main():
 #     # get_data("https://www.zerbee.com/Categories/Furniture.aspx")
-#     get_data_with_selenium(" https://www.partycity.com/")
+#     get_data_with_selenium("https://www.partycity.com/")
 #
 # if __name__ == "__main__":
 #     main()
@@ -68,9 +71,21 @@ with open("index_selenium.html", encoding="utf-8") as file:
 
 soup = BeautifulSoup(src, "lxml")
 
+domen = "https://www.partycity.com/"
 cath_list = soup.find_all("div", class_="pc-type pc-type--title-3 pc-navigation__column__header")[:-1]
 cath_page_links_list = []
 all_cath_dict = {}
+
+# session = HTMLSession()
+
+# options = webdriver.ChromeOptions()
+# options.add_argument("--safebrowsing-disable-download-protection")
+# options.add_argument("safebrowsing-disable-extension-blacklist")
+# driver = webdriver.Chrome(
+#             executable_path="C:\\Users\\Admin\\Desctop\\project_1\\chromedriver\\chromedriver.exe",
+#             options=options
+#         )
+
 for cath in cath_list: #Збір посилань на сторінки категорій
     name_of_dir = cath.find("a", tabindex="-1").text.strip()
     link = cath.find("a", tabindex="-1").get('href')
@@ -85,7 +100,17 @@ for cath in cath_list: #Збір посилань на сторінки кате
     for item in cpllist: # пробіжка по сторінках з категоріями
         responce_of_single_cath = requests.get(item, headers=headers)
         cathegorie = responce_of_single_cath.text
+        # print(responce_of_single_cath) #200
         soup_cath = BeautifulSoup(cathegorie, "lxml")
+        # print(soup_cath)
+        # all_card_of_part_div = soup_cath.select_one("div", class_="pc-search-sort")  # ксть товарів розділу категорії
+        all_card_of_part = soup_cath.xpath('//*[@id="product-search-results-pane"]/div/div/pc-search-sort/div[1]/div')
+        # digit_price = int(re.search('[0-9]', all_card_of_part).group(0))
+        # only_digit = re.sub(r'\D', '', all_card_of_part)
+        only_digit = all_card_of_part.strip(" ")[1]
+        print(only_digit)
+            # print(node)
+        # for page in range(0, )
 
 
 #
