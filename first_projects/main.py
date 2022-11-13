@@ -68,5 +68,5 @@ for item in items:
                 button.find('b').get_text().replace('\xa0', ''): test_list, # {Розділ : Список тем}
         })
 
-with open('portfolio.json', 'w', encoding='utf-8') as file:
+with open('portfolio_vseosvita.json', 'w', encoding='utf-8') as file:
     json.dump(ans, file, indent=3, ensure_ascii=False)

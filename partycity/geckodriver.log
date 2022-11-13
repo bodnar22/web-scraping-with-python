@@ -1,0 +1,165 @@
+1665138951302	geckodriver	INFO	Listening on 127.0.0.1:57361
+1665138954333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileGF7N8y"
+1665138955205	Marionette	INFO	Marionette enabled
+1665138955213	Marionette	INFO	Listening on port 57373
+Read port: 57373
+1665138955422	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileGF7N8y\\search.json.mozlz4", (void 0)))
+1665139343319	Marionette	INFO	Stopped listening on port 57373
+1665139348431	geckodriver	INFO	Listening on 127.0.0.1:57832
+1665139351442	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQzGd8P"
+1665139352224	Marionette	INFO	Marionette enabled
+1665139352232	Marionette	INFO	Listening on port 57844
+Read port: 57844
+1665139352384	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQzGd8P\\search.json.mozlz4", (void 0)))
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-10-07T10:42:46Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[Child 23304, MediaDecoderStateMachine #1] WARNING: Decoder=2ae03b4e100 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:370
+[Child 23304, MediaDecoderStateMachine #1] WARNING: Decoder=2ae03b4e100 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) - static MP4Metadata::ResultAndByteBuffer __cdecl mozilla::MP4Metadata::Metadata(mozilla::ByteStream *): Cannot parse metadata: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+1665139417193	Marionette	INFO	Stopped listening on port 57844
+1665141122322	geckodriver	INFO	Listening on 127.0.0.1:58330
+1665141125338	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilewQmCns"
+1665141125816	Marionette	INFO	Marionette enabled
+1665141125823	Marionette	INFO	Listening on port 58353
+Read port: 58353
+1665141126202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilewQmCns\\search.json.mozlz4", (void 0)))
+1665141132030	Marionette	INFO	Stopped listening on port 58353
+1665144480492	geckodriver	INFO	Listening on 127.0.0.1:58556
+1665144483545	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilebjdbHx"
+1665144484008	Marionette	INFO	Marionette enabled
+1665144484015	Marionette	INFO	Listening on port 58568
+Read port: 58568
+1665144484186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilebjdbHx\\search.json.mozlz4", (void 0)))
+1665144678441	Marionette	INFO	Stopped listening on port 58568
+5144490446	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQJnyDk"
+1665144491024	Marionette	INFO	Marionette enabled
+1665144491033	Marionette	INFO	Listening on port 58626
+Read port: 58626
+1665144491238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQJnyDk\\search.json.mozlz4", (void 0)))
+1665144672401	geckodriver	INFO	Listening on 127.0.0.1:58984
+1665144675433	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileDNj3EV"
+1665144676222	Marionette	INFO	Marionette enabled
+1665144676230	Marionette	INFO	Listening on port 58996
+Read port: 58996
+1665144676567	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileDNj3EV\\search.json.mozlz4", (void 0)))
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1665146962354	Marionette	INFO	Stopped listening on port 58996
+1665147320918	geckodriver	INFO	Listening on 127.0.0.1:60859
+1665147323952	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQ11eWq"
+1665147324719	Marionette	INFO	Marionette enabled
+1665147324726	Marionette	INFO	Listening on port 60871
+Read port: 60871
+1665147325064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileQ11eWq\\search.json.mozlz4", (void 0)))
+1665164637836	Marionette	INFO	Stopped listening on port 60871
+1665164672747	geckodriver	INFO	Listening on 127.0.0.1:62112
+1665164675826	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileR8HGbE"
+1665164676648	Marionette	INFO	Marionette enabled
+1665164676659	Marionette	INFO	Listening on port 62124
+Read port: 62124
+1665164676834	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileR8HGbE\\search.json.mozlz4", (void 0)))
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://partycity.svcs.cnxcit.com/v2/bootloader.js, line 1: SyntaxError: redeclaration of const DEV_DING
+JavaScript error: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: TypeError: I.parentNode is null
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.partycity.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://tr.snapchat.com."
+1665164706668	Marionette	INFO	Stopped listening on port 62124
+1665164804638	geckodriver	INFO	Listening on 127.0.0.1:62449
+1665164807691	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileyeobmw"
+1665164808485	Marionette	INFO	Marionette enabled
+1665164808492	Marionette	INFO	Listening on port 62461
+Read port: 62461
+1665164808658	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileyeobmw\\search.json.mozlz4", (void 0)))
+JavaScript error: resource:///modules/UrlbarInput.sys.mjs, line 3858: TypeError: engines is undefined
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://partycity.svcs.cnxcit.com/v2/bootloader.js, line 1: SyntaxError: redeclaration of const DEV_DING
+JavaScript error: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: TypeError: I.parentNode is null
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.partycity.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://tr.snapchat.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoJavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://vice-prod.sdiapi.com/vice_loader/PCHI/partycity, line 3: InternalError: too much recursion
+JavaScript error: https://partycity.svcs.cnxcit.com/v2/bootloader.js, line 1: SyntaxError: redeclaration of const DEV_DING
+JavaScript error: https://cdn.cquotient.com/js/v2/gretel.min.js, line 1: TypeError: I.parentNode is null
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.partycity.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://tr.snapchat.com."
+JavaScript error: https://static.quiq-cdn.com/chat-ui/common-3.1.555-ddfdc7f7.js, line 2: StubbornFetchError: Network
+1665222837806	Marionette	INFO	Stopped listening on port 62970
+WindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1665165943455	Marionette	INFO	Stopped listening on port 62461
+[Parent 22028, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1665166852202	geckodriver	INFO	Listening on 127.0.0.1:63607
+1665166855275	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileqI0MlA"
+1665166856046	Marionette	INFO	Marionette enabled
+1665166856055	Marionette	INFO	Listening on port 63622
+Read port: 63622
+1665166856281	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileqI0MlA\\search.json.mozlz4", (void 0)))
+1665167316311	geckodriver	INFO	Listening on 127.0.0.1:63705

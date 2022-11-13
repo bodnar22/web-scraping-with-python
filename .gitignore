@@ -4,12 +4,13 @@
 /douson_practice
 /euler
 /firefoxdriver
-/first_projects/index.html
 /venv
 /geckodriver.log
 /girls_costumes_sel.html
-/zerbee/index.html
-/zerbee/index_selenium.html
+/partycity/index.html
+/partycity/geckodriver.log
+/partycity/girls_costumes_sel.html
+/partycity/index_selenium.html
 
 
 
